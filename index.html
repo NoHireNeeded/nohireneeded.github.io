@@ -1,66 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>No Hire Needed — AI Tool Reviews for Solopreneurs and Small Business</title>
-<meta name="description" content="No Hire Needed publishes honest, researched AI tool reviews and guides for solopreneurs and small business. Use AI to replace the roles you can't afford to hire.">
+<title>No Hire Needed — AI Tools for Solopreneurs and Small Business</title>
+<meta name="description" content="No Hire Needed reviews the AI tools a one-person business uses to cover the roles it cannot afford to hire, from writing and design to bookkeeping, SEO, and social media.">
 <link rel="canonical" href="https://nohireneeded.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{ --blue:#185FA5; --teal:#5DCAA5; --ink:#0f2a34; --bg:#0a3b39; }
-  *{ margin:0; padding:0; box-sizing:border-box; }
-  body{ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:#12333d; background:#f6f9f8; line-height:1.6; }
-  a{ color:var(--blue); }
-  .wrap{ max-width:820px; margin:0 auto; padding:0 20px; }
-  header{ background:linear-gradient(135deg,#0a3b39 0%,#10534b 45%,#164a86 100%); color:#fff; padding:64px 0 56px; }
-  .brand{ font-size:14px; letter-spacing:.28em; text-transform:uppercase; color:var(--teal); font-weight:700; }
-  h1{ font-size:40px; line-height:1.15; margin:14px 0 10px; }
-  h1 .n{ color:var(--teal); }
-  .tag{ font-size:20px; color:rgba(255,255,255,.9); font-weight:500; max-width:620px; }
-  main{ padding:48px 0 24px; }
-  main p{ font-size:18px; margin-bottom:20px; }
-  h2{ font-size:24px; margin:36px 0 14px; color:var(--ink); }
-  .cards{ display:grid; grid-template-columns:1fr; gap:16px; margin:8px 0 8px; }
-  @media(min-width:640px){ .cards{ grid-template-columns:1fr 1fr 1fr; } }
-  .card{ background:#fff; border:1px solid #e3ecea; border-radius:12px; padding:18px; }
-  .card h3{ font-size:17px; margin-bottom:6px; color:var(--blue); }
-  .card p{ font-size:15px; margin:0; color:#3d5a63; }
-  .links a{ font-weight:700; }
-  footer{ border-top:1px solid #e3ecea; margin-top:40px; padding:28px 0 48px; color:#5a747d; font-size:14px; }
+  :root{
+    --blue:#185FA5;
+    --navy:#0e2b4c;
+    --teal:#5DCAA5;
+    --teal-deep:#178a63;
+    --ink:#1c2733;
+    --muted:#5a6b7b;
+    --line:#e6edf5;
+    --bg:#ffffff;
+    --panel:#f5f9fd;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.55;
+  }
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px}
+
+  /* Hero */
+  header.hero{
+    background:radial-gradient(120% 160% at 12% 0%, var(--blue) 0%, var(--navy) 66%);
+    color:#fff;
+    padding:64px 0 56px;
+  }
+  .brand{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Poppins';font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    font-size:15px;color:#fff;
+  }
+  .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--teal);display:inline-block}
+  .brand a{color:#fff}
+  h1{
+    font-family:'Poppins';font-weight:800;letter-spacing:-.01em;
+    font-size:40px;line-height:1.08;margin:22px 0 0;max-width:760px;
+  }
+  h1 .t{color:var(--teal)}
+  .lede{
+    font-size:19px;color:#d7e4f2;margin-top:18px;max-width:660px;font-weight:400;
+  }
+  .lede a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+  /* Sections */
+  main{padding:14px 0 8px}
+  section{padding:36px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  .kicker{
+    font-family:'Poppins';font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    font-size:12.5px;color:var(--teal-deep);
+  }
+  h2{
+    font-family:'Poppins';font-weight:700;font-size:24px;color:var(--navy);
+    margin:8px 0 6px;letter-spacing:-.01em;
+  }
+  section > .wrap > p.intro{color:var(--muted);font-size:16px;max-width:680px;margin-bottom:22px}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:640px){.grid{grid-template-columns:1fr}}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;
+  }
+  .card h3{font-family:'Poppins';font-weight:700;font-size:16.5px;margin:0 0 3px;line-height:1.3}
+  .card p{font-size:14.5px;color:var(--muted);margin:0}
+  .card h3 a{color:var(--blue)}
+
+  /* Feature row (start here) */
+  .feature{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  @media (max-width:720px){.feature{grid-template-columns:1fr}}
+  .feature .card{background:#fff;border-color:var(--line)}
+  .feature .card.accent{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal) inset}
+
+  footer{padding:40px 0 56px;color:var(--muted);font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:space-between}
+  footer a{color:var(--blue)}
+  .tag{color:var(--muted);font-size:13.5px}
 </style>
 </head>
 <body>
-<header>
+
+<header class="hero">
   <div class="wrap">
-    <div class="brand">No Hire Needed</div>
-    <h1>Use AI to replace every role you <span class="n">can't afford to hire</span>.</h1>
-    <p class="tag">Honest, researched AI tool reviews and guides for solopreneurs and small business.</p>
+    <span class="brand"><span class="dot"></span><a href="https://nohireneeded.com/">No Hire Needed</a></span>
+    <h1>Use AI to replace every role you <span class="t">can't afford to hire.</span></h1>
+    <p class="lede">
+      No Hire Needed reviews the <a href="https://nohireneeded.com/">AI tools for solopreneurs and small business</a>
+      that cover the work a growing one-person business would normally hire for. We research and evaluate the tools so you
+      can pick the right one and get back to running the business. Start with
+      <a href="https://nohireneeded.com/ai-tools-for-solopreneurs-and-small-business/">the AI Tools Guide</a>.
+    </p>
   </div>
 </header>
 
 <main>
-  <div class="wrap">
-    <p><a href="https://nohireneeded.com/">No Hire Needed</a> is a review site for people running lean. We research and evaluate the AI tools that let a solo operator or a small business cover the work of a marketer, a bookkeeper, a designer, an assistant, and the other roles a growing business normally hires for, without the payroll.</p>
 
-    <p>Every review answers the same practical question: how does this tool help someone who can't afford to hire? No hype, no invented features, just what a tool does, what it costs, and where it falls short.</p>
-
-    <h2>What you'll find</h2>
-    <div class="cards">
-      <div class="card"><h3>Tool reviews</h3><p>Single-tool deep looks: who it fits, what it costs, and where it is not the pick.</p></div>
-      <div class="card"><h3>Roundups and guides</h3><p>Ranked comparisons of the best AI tools for each role, from CRM to content.</p></div>
-      <div class="card"><h3>The Tool Guide</h3><p>One page mapping the right AI tool to each job a lean business needs done.</p></div>
+  <section>
+    <div class="wrap">
+      <div class="kicker">Start here</div>
+      <h2>The three pages most people open first</h2>
+      <p class="intro">The guide sorts every tool by the role it replaces. The library is the full archive. The statistics page is our own research on what those roles actually cost.</p>
+      <div class="feature">
+        <div class="card accent">
+          <h3><a href="https://nohireneeded.com/ai-tools-for-solopreneurs-and-small-business/">The AI Tools Guide</a></h3>
+          <p>Every tool we cover, organized by the job it does, from marketing and design to bookkeeping and support.</p>
+        </div>
+        <div class="card">
+          <h3><a href="https://nohireneeded.com/article-library/">The Article Library</a></h3>
+          <p>The complete archive of guides, reviews, and head-to-head comparisons in one filterable place.</p>
+        </div>
+        <div class="card">
+          <h3><a href="https://nohireneeded.com/ai-tool-statistics/">AI tool statistics for small business</a></h3>
+          <p>Our original analysis of what it costs to cover eight core roles with AI instead of hiring, benefits included.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <h2>Start here</h2>
-    <p class="links">Read the latest at <a href="https://nohireneeded.com/">nohireneeded.com</a>, browse every piece in <a href="https://nohireneeded.com/article-library/">the Article Library</a>, or jump straight to <a href="https://nohireneeded.com/ai-tools-for-solopreneurs-and-small-business/">the AI Tools Guide</a>.</p>
-  </div>
+  <section>
+    <div class="wrap">
+      <div class="kicker">Reviews by role</div>
+      <h2>Pick the role you can't afford to fill</h2>
+      <p class="intro">Each guide takes one job a business would normally hire for, then researches and ranks the AI tools that can do the bulk of it for the price of a subscription.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Copywriter</h3>
+          <p>Our pick of the <a href="https://nohireneeded.com/ai-writing-tools/">best AI writing tools</a> for content, copy, and everyday drafting.</p>
+        </div>
+        <div class="card">
+          <h3>Graphic designer</h3>
+          <p>The <a href="https://nohireneeded.com/ai-design-tools/">AI design tools</a> that handle brand visuals, graphics, and layouts.</p>
+        </div>
+        <div class="card">
+          <h3>SEO specialist</h3>
+          <p>The <a href="https://nohireneeded.com/ai-seo-tools/">AI SEO tools</a> that plan, write, and track your way up the rankings.</p>
+        </div>
+        <div class="card">
+          <h3>Email marketer</h3>
+          <p>The <a href="https://nohireneeded.com/ai-email-marketing-tools/">AI email marketing tools</a> that build lists and send campaigns on autopilot.</p>
+        </div>
+        <div class="card">
+          <h3>Social media manager</h3>
+          <p>The <a href="https://nohireneeded.com/ai-social-media-scheduling-tools/">AI social media scheduling tools</a> that plan and post across every channel.</p>
+        </div>
+        <div class="card">
+          <h3>Social media analyst</h3>
+          <p>The <a href="https://nohireneeded.com/social-media-analytics-tools/">AI social media analytics tools</a> that show what worked and help you reply faster.</p>
+        </div>
+        <div class="card">
+          <h3>Bookkeeper</h3>
+          <p>The <a href="https://nohireneeded.com/ai-bookkeeping-tools/">AI bookkeeping tools</a> that track the money without a monthly invoice.</p>
+        </div>
+        <div class="card">
+          <h3>Sales assistant</h3>
+          <p>The <a href="https://nohireneeded.com/ai-crm-tools/">AI CRM tools</a> that keep leads warm and follow-ups from slipping.</p>
+        </div>
+        <div class="card">
+          <h3>Web developer</h3>
+          <p>The <a href="https://nohireneeded.com/ai-website-builders/">AI website builders</a> that stand up a real site without a dev.</p>
+        </div>
+        <div class="card">
+          <h3>Video editor</h3>
+          <p>The <a href="https://nohireneeded.com/ai-video-tools/">AI video tools</a> that turn a script or a recording into finished video.</p>
+        </div>
+        <div class="card">
+          <h3>Operations assistant</h3>
+          <p>The <a href="https://nohireneeded.com/ai-automation-tools/">AI automation tools</a> that connect your apps and run the busywork for you.</p>
+        </div>
+        <div class="card">
+          <h3>Content repurposer</h3>
+          <p>The <a href="https://nohireneeded.com/ai-content-repurposing-tools/">AI content repurposing tools</a> that turn one post into ten.</p>
+        </div>
+        <div class="card">
+          <h3>Visibility strategist</h3>
+          <p>The <a href="https://nohireneeded.com/ai-search-visibility-tools/">AI search visibility tools</a> that get you cited by AI answers, not just Google.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="kicker">Go deeper</div>
+      <h2>Two reads for the bigger picture</h2>
+      <p class="intro">When you want the strategy behind the tools rather than another shortlist, start with these.</p>
+      <div class="grid">
+        <div class="card">
+          <h3><a href="https://nohireneeded.com/ai-search-visibility/">How AI search visibility works</a></h3>
+          <p>Why getting quoted by AI answer engines is the new front page, and how a small site earns a spot.</p>
+        </div>
+        <div class="card">
+          <h3><a href="https://nohireneeded.com/ai-tech-stack/">The AI tech stack for a one-person business</a></h3>
+          <p>How the individual tools fit together into one lean stack that covers a whole company's worth of roles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <div class="wrap">
-    No Hire Needed — AI tools for solopreneurs and small business. Reach us at hello@nohireneeded.com.
+    <span>&copy; No Hire Needed &middot; <a href="https://nohireneeded.com/">nohireneeded.com</a></span>
+    <span class="tag">AI tools reviews for solopreneurs and small business.</span>
   </div>
 </footer>
+
 </body>
 </html>
